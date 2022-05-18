@@ -1,9 +1,14 @@
 import { GetServerSideProps, NextPage } from "next";
 import { useState } from "react";
-import styles from "./index.module.css";
+
+interface CatCategory {
+  id: number;
+  name: string;
+}
 
 interface SearchCatImage {
   breeds: string[];
+  categories: CatCategory[];
   id: string;
   url: string;
   width: number;
@@ -33,7 +38,7 @@ const IndexPage: NextPage<IndexPageProps> = ({ initialCatImageUrl }) => {
   return (
     <div>
       <button onClick={handleClick}>きょうのにゃんこ🐱</button>
-      <div className={styles.catImageContainer}>
+      <div style={{ marginTop: 8 }}>
         <img src={catImageUrl} width={500} height="auto" />
       </div>
     </div>

@@ -1,5 +1,5 @@
-import { GetServerSideProps, NextPage } from "next";
 import { useState } from "react";
+import type { GetServerSideProps, NextPage } from "next";
 
 interface CatCategory {
   id: number;

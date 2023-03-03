@@ -10,12 +10,11 @@ const IndexPage: NextPage = () => {
       setLoading(false);
     });
   }, []);
-  // ボタンをクリックしたときに画像を読み込む処理
   const handleClick = async () => {
-    setLoading(true); // 読込中フラグを立てる
+    setLoading(true);
     const newImage = await fetchImage();
-    setImageUrl(newImage.url); // 画像URLの状態を更新する
-    setLoading(false); // 読込中フラグを倒す
+    setImageUrl(newImage.url);
+    setLoading(false);
   };
   return (
     <div>

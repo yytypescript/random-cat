@@ -11,3 +11,5 @@ const fetchImage = async () => {
   console.log(images);
   return images[0];
 };
+
+fetchImage(); // 追加
